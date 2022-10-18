@@ -6,7 +6,8 @@
         
     </head>
     <body>
-        <h1>Listado de Clientes</h1>
+        <header th:replace="/layout/plantilla :: header"/>
+        <div th:if="${clientes != null and !clientes.empty}">
         <table border="1">
             <thead>
                 <tr>
@@ -25,6 +26,10 @@
                 </tr>
             </tbody>
         </table>
-
+        </div>
+        <div th:if="${clientes == null or clientes.empty}">
+            Lista vacia
+        </div>
     </body>
+    <footer th:replace="/layout/plantilla :: footer"/>
 </html>
