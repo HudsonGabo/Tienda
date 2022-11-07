@@ -1,4 +1,3 @@
-
 package Tienda.Domain;
 
 import java.io.Serializable;
@@ -7,23 +6,25 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="cliente")
+@Table(name = "cliente")
 
-public class Cliente implements Serializable{
-    
+public class Cliente implements Serializable {
+
     private static final long serialVersionUID = 1L;
-    
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long idCliente;
-    
-     String nombre;
-     String apellidos;
-     String correo;
-     String telefono;
+
+    String nombre;
+    String apellidos;
+    String correo;
+    String telefono;
+
+    @JoinColumn(name = "id_credito", referencedColumnName = "id_credito")
+    @ManyToOne
+    private Credito credito;
 
     public Cliente() {
     }
@@ -34,6 +35,5 @@ public class Cliente implements Serializable{
         this.correo = correo;
         this.telefono = telefono;
     }
-    
-    
+
 }
