@@ -1,4 +1,4 @@
-/*
+
 package Tienda.Domain;
 
 import java.io.Serializable;
@@ -29,4 +29,3 @@ public class Credito implements Serializable{
     
     
 }
-*/
