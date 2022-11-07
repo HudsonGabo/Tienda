@@ -1,4 +1,4 @@
-
+/*
 package Tienda.Domain;
 
 import java.io.Serializable;
@@ -27,3 +27,4 @@ private Long idCategoria;
     }
     
 }
+*/

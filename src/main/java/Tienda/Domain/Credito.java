@@ -1,4 +1,4 @@
-
+/*
 package Tienda.Domain;
 
 import java.io.Serializable;
@@ -17,7 +17,7 @@ public class Credito implements Serializable{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     
-    private Long idCredito;
+    private Long id_credito;
     private double limite;
 
     public Credito() {
@@ -29,3 +29,4 @@ public class Credito implements Serializable{
     
     
 }
+*/
