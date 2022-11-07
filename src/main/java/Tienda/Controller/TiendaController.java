@@ -1,7 +1,7 @@
 
 package Tienda.Controller;
 
-import Tienda.dao.ClienteDao;
+import Tienda.Service.ClienteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 
 public class TiendaController {
-    
+
+        
     @Autowired
-    private ClienteDao clienteDao;
-    
+    private ClienteService clienteService;
     
     @GetMapping("/")
     public String page(Model model) {
@@ -23,7 +23,7 @@ public class TiendaController {
         log.info("ESTAMOS USANDO UNA ARQUITECTURA MVC");
 
         
-        var clientes=clienteDao.findAll();
+        var clientes=clienteService.getClientes();
         
         model.addAttribute("clientes",clientes);
         
